@@ -1,5 +1,6 @@
 (setq user-full-name "Attila V. Molnar")
-(setenv "PYTHONPATH" "/home/attila/repo/python")
+(defvar user-home-dir (getenv "HOME") "Define home directory of the user")
+(setenv "PYTHONPATH" (concat user-home-dir "/repo/python"))
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
